@@ -45,11 +45,11 @@ export const verifyToken = (req: Request, res: Response, next: NextFunction): vo
                 success: false,
                 message: 'Invalid token. Please login again.',
             });
-        } else {
-            res.status(500).json({
-                success: false,
-                message: 'Error verifying token',
-            });
+        // } else {
+        //     res.status(500).json({
+        //         success: false,
+        //         message: 'Error verifying token',
+        //     });
         }
     }
 };

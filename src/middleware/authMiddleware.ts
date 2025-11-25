@@ -35,16 +35,16 @@ export const verifyToken = (req: Request, res: Response, next: NextFunction): vo
 
         next();
     } catch (error) {
-        if (error instanceof jwt.TokenExpiredError) {
-            res.status(401).json({
-                success: false,
-                message: 'Token expired. Please login again.',
-            });
-        } else if (error instanceof jwt.JsonWebTokenError) {
-            res.status(401).json({
-                success: false,
-                message: 'Invalid token. Please login again.',
-            });
+        // if (error instanceof jwt.TokenExpiredError) {
+        //     res.status(401).json({
+        //         success: false,
+        //         message: 'Token expired. Please login again.',
+        //     });
+        // } else if (error instanceof jwt.JsonWebTokenError) {
+        //     res.status(401).json({
+        //         success: false,
+        //         message: 'Invalid token. Please login again.',
+        //     });
         // } else {
         //     res.status(500).json({
         //         success: false,

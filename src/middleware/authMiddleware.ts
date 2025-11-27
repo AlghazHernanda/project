@@ -26,12 +26,12 @@ export const verifyToken = (req: Request, res: Response, next: NextFunction): vo
         // Verifikasi token menggunakan JWT_SECRET
         const decoded = jwt.verify(token, process.env.JWT_SECRET || 'secret') as JwtPayload;
 
-        // Simpan user data di req untuk digunakan di route handler
-        req.user = {
-            id: decoded.id,
-            email: decoded.email,
-            username: decoded.username,
-        };
+        // // Simpan user data di req untuk digunakan di route handler
+        // req.user = {
+        //     id: decoded.id,
+        //     email: decoded.email,
+        //     username: decoded.username,
+        // };
 
         next();
     } catch (error) {
